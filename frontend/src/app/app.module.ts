@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ReportsComponent } from './pages/reports/reports.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LateralMenuComponent } from './components/lateral-menu/lateral-menu.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DevicesComponent,
     LoginComponent,
     SignupComponent,
-    ReportsComponent
+    ReportsComponent,
+    LateralMenuComponent
   ],
   imports: [
     BrowserModule,

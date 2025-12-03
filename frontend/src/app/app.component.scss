@@ -1,0 +1,18 @@
+@use '../styles.scss' as *;
+
+.container {
+  @include center-flex;
+  width: 100%;
+  height: 100%;
+  gap: 1vw;
+
+  .lateral-menu {
+    width: 10%;
+    height: 100%;
+  }
+
+  .main-content {
+    width: 100%;
+    height: 100%;
+  }
+}
