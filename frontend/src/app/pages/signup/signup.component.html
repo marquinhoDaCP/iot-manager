@@ -1,2 +1,19 @@
 <div class="container">
+  <div class="signup-content">
+    <form class="signup-content-forms" action="#" [formGroup]="signupForms">
+      <h1 class="iot-manager-title">Cadastro</h1>
+      <div class="signup-content-forms-inputs">
+        <input class="iot-manager-input" type="text" placeholder="Nome" formControlName="name">
+        <input class="iot-manager-input" type="text" placeholder="Sobrenome" formControlName="lastName">
+        <input class="iot-manager-input" type="text" placeholder="E-mail" formControlName="email">
+        <input class="iot-manager-input" type="password" placeholder="Senha" formControlName="password">
+        <input class="iot-manager-input" type="password" placeholder="Confirmar Senha"
+          formControlName="confirmPassword">
+      </div>
+      <div class="signup-content-forms-buttons">
+        <button class="iot-manager-confirm-button" (click)="signup()">Cadastrar</button>
+        <span>Já possui uma conta? <a href="login">Clique aqui</a></span>
+      </div>
+    </form>
+  </div>
 </div>
