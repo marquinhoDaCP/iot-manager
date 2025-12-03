@@ -1,2 +1,15 @@
 <div class="container">
+  <div class="login-content">
+    <form class="login-content-forms" action="#" [formGroup]="loginForms">
+      <h1 class="iot-manager-title">Login</h1>
+      <div class="login-content-forms-inputs">
+        <input class="iot-manager-input" type="text" placeholder="E-mail" formControlName="email">
+        <input class="iot-manager-input" type="password" placeholder="Senha" formControlName="password">
+      </div>
+      <div class="login-content-forms-buttons">
+        <button class="iot-manager-login-button">Logar</button>
+        <span>Ainda não possui uma conta? <a href="signup">Clique aqui</a></span>
+      </div>
+    </form>
+  </div>
 </div>
