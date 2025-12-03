@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+
+  constructor(
+    private _router: Router
+  ) { }
+
+  public get showLateralMenu(): boolean {
+    const currentRouter = this._router.url;
+    if (
+      currentRouter.includes('login') || currentRouter.includes('signup')
+    ) return false;
+
+    return true;
+  }
+
 }

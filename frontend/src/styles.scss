@@ -10,21 +10,36 @@
 }
 
 :root {
-  --main-text: #2E2D2D;
-  --anchor-text: rgb(0, 38, 255);
   --success-color: #10AC07;
   --success-color-hover: #1dbd14;
   --warning-color: #FFA600;
   --error-color: #D31818;
-  --base-color: #FFFFFF;
-  --border-color: #A9A9A9;
+
+  --base-color: #0A141F;
+  --overlay-color: #1C2E45;
+  --overlay-base-color: #142235;
+  --border-color: #2A3D55;
   --icon-color: #A9A9A9;
-  --disabled-color: #EFEFEF;
+
+  --primary-text: #E8EEF5;
+  --secondary-text: #B9C5D3;
+  --tertiary-text: #7C8A99;
+  --placeholder-text: #526273;
+  --disabled-color: #A5B4C4;
+
+  --input-background: #122236;
+  --input-border: #2A3D55;
 }
 
 * {
   font-family: "Lato Regular";
   color: var(--main-text);
+}
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html,
@@ -37,6 +52,7 @@ body {
 }
 
 .iot-manager-title {
+  color: var(--primary-text);
   font-size: clamp(3vh, 0.8vw, 5vh);
   margin: 0;
 }
@@ -48,24 +64,21 @@ body {
   width: 15vw;
   font-size: clamp(1vh, 0.8vw, 2vh);
   border-radius: 5px;
-  border: 1px solid var(--border-color);
+  color: var(--primary-text);
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border);
+  transition: color 0.2s linear, border 0.2s ease-in-out;
 
   &::placeholder {
-    color: var(--border-color);
+    color: var(--placeholder-text);
   }
-}
 
-.iot-manager-input {
-  border: none;
-  outline: none;
-  padding: 1vh 0.5vw;
-  width: 15vw;
-  font-size: clamp(1vh, 0.8vw, 2vh);
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
+  &:hover {
+    border: 1px solid #3B4F6A;
+  }
 
-  &::placeholder {
-    color: var(--border-color);
+  &:focus {
+    border: 1px solid #3B8CFF;
   }
 }
 
@@ -75,14 +88,14 @@ body {
   padding: 1.5vh 6.5vw;
   border: none;
   background-color: var(--success-color);
-  color: var(--base-color);
+  color: var(--primary-text);
   font-size: clamp(1vh, 0.8vw, 2vh);
   transition: color 0.2s linear,
     transform 0.2s ease-in-out,
     box-shadow 0.2s ease-in-out;
 
   &:hover {
-    color: var(--base-color);
+    color: var(--primary-text);
     background-color: var(--success-color-hover);
     transform: scale(1.05);
     box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.25);
