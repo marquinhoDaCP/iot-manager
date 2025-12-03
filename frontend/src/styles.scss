@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Lato Regular";
+  src: url("./assets/fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("./assets/fonts/Lato/Lato-Bold.ttf");
+}
+
+:root {
+  --main-text: #2E2D2D;
+  --success-color: #10AC07;
+  --warning-color: #FFA600;
+  --error-color: #D31818;
+  --base-color: #FFFFFF;
+  --border-color: #A9A9A9;
+  --icon-color: #A9A9A9;
+  --disabled-color: #EFEFEF;
+}
+
+* {
+  font-family: "Lato Regular";
+  color: var(--main-text);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--base-color);
+}
