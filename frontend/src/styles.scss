@@ -11,7 +11,9 @@
 
 :root {
   --main-text: #2E2D2D;
+  --anchor-text: rgb(0, 38, 255);
   --success-color: #10AC07;
+  --success-color-hover: #1dbd14;
   --warning-color: #FFA600;
   --error-color: #D31818;
   --base-color: #FFFFFF;
@@ -32,4 +34,56 @@ body {
   width: 100%;
   height: 100vh;
   background-color: var(--base-color);
+}
+
+.iot-manager-title {
+  font-size: clamp(3vh, 0.8vw, 5vh);
+}
+
+.iot-manager-input {
+  border: none;
+  outline: none;
+  padding: 1vh 0.5vw;
+  width: 15vw;
+  font-size: clamp(1vh, 0.8vw, 2vh);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+
+  &::placeholder {
+    color: var(--border-color);
+  }
+}
+
+.iot-manager-input {
+  border: none;
+  outline: none;
+  padding: 1vh 0.5vw;
+  width: 15vw;
+  font-size: clamp(1vh, 0.8vw, 2vh);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+
+  &::placeholder {
+    color: var(--border-color);
+  }
+}
+
+.iot-manager-login-button {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 1.5vh 6.5vw;
+  color: var(--success-color);
+  background-color: transparent;
+  font-size: clamp(1vh, 0.8vw, 2vh);
+  border: 1px solid var(--success-color);
+  transition: color 0.2s linear,
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--success-color-hover);
+    border: 1px solid var(--success-color-hover);
+    box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.25);
+    transform: scale(1.05);
+  }
 }
