@@ -15,8 +15,9 @@ a {
   border-right: 1px solid var(--border-color);
   background-color: var(--overlay-base-color);
 
-  .lateral-menu-header a {
+  .lateral-menu-header {
     @include center-flex;
+    cursor: pointer;
     flex-direction: column;
     width: 100%;
     padding: 2vh 0vw;
@@ -34,8 +35,9 @@ a {
   }
 
   .lateral-menu-list {
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
     flex-direction: column;
     width: 100%;
@@ -45,11 +47,15 @@ a {
     padding: 0;
 
     .lateral-menu-list-item {
-      @include center-flex;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
       cursor: pointer;
       flex-direction: column;
       gap: 1vh;
+      padding: 0vh 1vw;
       width: 100%;
+      z-index: 1;
 
       img {
         height: 3vh;
@@ -59,6 +65,29 @@ a {
         font-weight: bolder;
         color: var(--primary-text);
         font-size: clamp(1.5vh, 0.5vw, 3vh);
+      }
+    }
+
+    .lateral-menu-active-tab {
+      position: absolute;
+      top: inherit;
+      width: inherit;
+      height: 12%;
+      background-color: var(--base-color);
+      border: 1px solid var(--primary-text);
+      border-right: none;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      transition: top 0.2s linear, height 0.2s linear;
+      z-index: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: -1%;
+        background: transparent;
+        border-right: 1px solid var(--base-color);
+        z-index: 1;
       }
     }
   }

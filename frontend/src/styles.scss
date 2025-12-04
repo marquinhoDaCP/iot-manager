@@ -29,6 +29,8 @@
 
   --input-background: #122236;
   --input-border: #2A3D55;
+  --input-hover: #3B4F6A;
+  --input-focus: #3B8CFF;
 }
 
 * {
@@ -74,11 +76,11 @@ body {
   }
 
   &:hover {
-    border: 1px solid #3B4F6A;
+    border: 1px solid var(--input-hover);
   }
 
   &:focus {
-    border: 1px solid #3B8CFF;
+    border: 1px solid var(--input-focus);
   }
 }
 
