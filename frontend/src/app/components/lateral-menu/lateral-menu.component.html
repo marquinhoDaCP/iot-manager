@@ -1,28 +1,22 @@
 <div class="container">
-  <div class="lateral-menu-header">
-    <a href="">
-      <img src="../../../assets/icons/iot-manager-logo.svg" alt="logo">
-      <span>IoT Manager</span>
-    </a>
+  <div class="lateral-menu-header" (click)="navigateTo('')">
+    <img src="../../../assets/icons/iot-manager-logo.svg" alt="logo">
+    <span>IoT Manager</span>
   </div>
   <ol class="lateral-menu-list">
-    <li class="lateral-menu-list-item">
-      <a href="devices" class="lateral-menu-list-item">
-        <img src="../../../assets/icons/devices-icon.svg" alt="devices">
-        <span>Dispositivos</span>
-      </a>
+    <li #menuItems id="router_devices" class="lateral-menu-list-item" (click)="navigateTo('devices')">
+      <img src="../../../assets/icons/devices-icon.svg" alt="devices">
+      <span>Dispositivos</span>
     </li>
-    <li class="lateral-menu-list-item">
-      <a href="reports" class="lateral-menu-list-item">
-        <img src="../../../assets/icons/report-icon.svg" alt="report">
-        <span>Alertas</span>
-      </a>
+    <li #menuItems id="router_reports" class="lateral-menu-list-item" (click)="navigateTo('reports')">
+      <img src="../../../assets/icons/report-icon.svg" alt="report">
+      <span>Alertas</span>
     </li>
-    <li class="lateral-menu-list-item">
-      <a href="dashboard" class="lateral-menu-list-item">
-        <img src="../../../assets/icons/dashboard-icon.svg" alt="dashboard">
-        <span>Dashboard</span>
-      </a>
+    <li #menuItems id="router_dashboard" class="lateral-menu-list-item" (click)="navigateTo('dashboard')">
+      <img src="../../../assets/icons/dashboard-icon.svg" alt="dashboard">
+      <span>Dashboard</span>
     </li>
+    <div class="lateral-menu-active-tab" #activeTab>
+    </div>
   </ol>
 </div>
